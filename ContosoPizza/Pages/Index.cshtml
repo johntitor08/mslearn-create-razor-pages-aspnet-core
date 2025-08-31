@@ -1,11 +1,11 @@
 ﻿@page
 @model IndexModel
+@inject ContosoPizza.Services.IBusinessService BusinessService
 @{
     ViewData["Title"] = "The Home for Pizza Lovers";
-    TimeSpan timeInBusiness = DateTime.Now - new DateTime(2018, 8, 14);
 }
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <p>We’ve been in business for @BusinessService.DaysInBusiness days!</p>
 </div>

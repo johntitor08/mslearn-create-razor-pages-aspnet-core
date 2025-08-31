@@ -11,6 +11,7 @@ builder.Services.AddRazorPages();
 builder.Services.AddScoped<PizzaService>();
 builder.Services.AddDbContext<PizzaContext>(options =>
     options.UseSqlite("Data Source=ContosoPizza.db"));
+builder.Services.AddSingleton<IBusinessService, BusinessService>();
 
 var app = builder.Build();
 

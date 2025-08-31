@@ -9,5 +9,10 @@ namespace ContosoPizza.Pages
         public void OnGet()
         {
         }
+
+        public int DaysSince(DateTime startDate)
+        {
+            return (int)(DateTime.Now - startDate).TotalDays;
+        }
     }
 }
