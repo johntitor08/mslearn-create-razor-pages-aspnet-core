@@ -4,6 +4,6 @@ namespace ContosoPizza.Data
 {
     public class PizzaContext(DbContextOptions<PizzaContext> options) : DbContext(options)
     {
-        public DbSet<ContosoPizza.Models.Pizza>? Pizzas { get; set; }
+        public DbSet<Models.Pizza>? Pizzas { get; set; }
     }
 }
